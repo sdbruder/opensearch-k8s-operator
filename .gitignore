@@ -27,3 +27,5 @@ opensearch-operator/functionaltests/kubeconfig
 
 # Ignore direnv file
 .envrc
+
+pkg/
