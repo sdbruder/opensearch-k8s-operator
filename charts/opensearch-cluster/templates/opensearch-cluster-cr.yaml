@@ -184,6 +184,7 @@ spec:
   nodePools:
   {{- range $key,$val := .Values.opensearchCluster.nodePools }}
     - component: {{ $val.component }}
+      updateGroup: {{ $val.updateGroup | default $val.component }}
       replicas: {{ $val.replicas }}
       {{- if  $val.pdb }}
       pdb: # Add pdb configuration
